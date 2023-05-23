@@ -5,3 +5,8 @@
 <% else %>
 <p>This task is completed</p>
 <% end %>
+<%= link_to "edit", edit_task_path(@task) %>
+<%= link_to "tasks", tasks_path %>
+<%= link_to "delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
